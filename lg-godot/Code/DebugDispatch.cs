@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 
 using Godot;
-
 using LostGen;
 using LostGen.Action;
 
