@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lost Generation - Godot", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lost Generation", "..\lg\Lost Generation.csproj", "{793B68F1-C99B-4986-B4A1-1C1BBF12F8E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lg-test", "..\lg-test\lg-test.csproj", "{74BE6422-F660-4C16-856E-8553B463E992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lg-test", "..\lg-test\Lost Generation - Test.csproj", "{74BE6422-F660-4C16-856E-8553B463E992}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

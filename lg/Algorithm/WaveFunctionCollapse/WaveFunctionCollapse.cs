@@ -40,10 +40,7 @@ namespace LostGen {
                     Return the observed values as an output image
 
          */
-        /// <summary>
-        /// Divides the given sample into `size` * `size` kernels
-        /// </summary>
-        /// <returns></returns>
+        
         public static IEnumerable<int[,]> PatternsFromSample(int[,] sample, int size) {
             // Sweep across the sample in increments of size * size
             for (int y = 0; y < sample.GetLength(0); y += size) {
@@ -59,5 +56,7 @@ namespace LostGen {
                 }
             }
         }
+
+        
     }
 }
