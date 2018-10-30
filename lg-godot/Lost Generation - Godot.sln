@@ -2,9 +2,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lost Generation - Godot", "Lost Generation - Godot.csproj", "{D2EF4C56-1837-4097-8829-853DB717A32F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lost Generation - Godot", "Lost Generation - Godot.csproj", "{749F24CC-FADF-49B4-943E-2616C4CA3DA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lost Generation", "..\lg\Lost Generation.csproj", "{793B68F1-C99B-4986-B4A1-1C1BBF12F8E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lg-test", "..\lg-test\lg-test.csproj", "{74BE6422-F660-4C16-856E-8553B463E992}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,18 +15,24 @@ Global
 		Tools|Any CPU = Tools|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D2EF4C56-1837-4097-8829-853DB717A32F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2EF4C56-1837-4097-8829-853DB717A32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2EF4C56-1837-4097-8829-853DB717A32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2EF4C56-1837-4097-8829-853DB717A32F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2EF4C56-1837-4097-8829-853DB717A32F}.Tools|Any CPU.ActiveCfg = Tools|Any CPU
-		{D2EF4C56-1837-4097-8829-853DB717A32F}.Tools|Any CPU.Build.0 = Tools|Any CPU
+		{749F24CC-FADF-49B4-943E-2616C4CA3DA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{749F24CC-FADF-49B4-943E-2616C4CA3DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{749F24CC-FADF-49B4-943E-2616C4CA3DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{749F24CC-FADF-49B4-943E-2616C4CA3DA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{749F24CC-FADF-49B4-943E-2616C4CA3DA1}.Tools|Any CPU.ActiveCfg = Tools|Any CPU
+		{749F24CC-FADF-49B4-943E-2616C4CA3DA1}.Tools|Any CPU.Build.0 = Tools|Any CPU
 		{793B68F1-C99B-4986-B4A1-1C1BBF12F8E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{793B68F1-C99B-4986-B4A1-1C1BBF12F8E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{793B68F1-C99B-4986-B4A1-1C1BBF12F8E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{793B68F1-C99B-4986-B4A1-1C1BBF12F8E5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{793B68F1-C99B-4986-B4A1-1C1BBF12F8E5}.Tools|Any CPU.ActiveCfg = Release|Any CPU
 		{793B68F1-C99B-4986-B4A1-1C1BBF12F8E5}.Tools|Any CPU.Build.0 = Release|Any CPU
+		{74BE6422-F660-4C16-856E-8553B463E992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74BE6422-F660-4C16-856E-8553B463E992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74BE6422-F660-4C16-856E-8553B463E992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74BE6422-F660-4C16-856E-8553B463E992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74BE6422-F660-4C16-856E-8553B463E992}.Tools|Any CPU.ActiveCfg = Debug|Any CPU
+		{74BE6422-F660-4C16-856E-8553B463E992}.Tools|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
