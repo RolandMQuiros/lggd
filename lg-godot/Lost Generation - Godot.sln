@@ -6,7 +6,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lost Generation - Godot", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lost Generation", "..\lg\Lost Generation.csproj", "{793B68F1-C99B-4986-B4A1-1C1BBF12F8E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lg-test", "..\lg-test\Lost Generation - Test.csproj", "{74BE6422-F660-4C16-856E-8553B463E992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lost Generation - Test", "..\lg-test\Lost Generation - Test.csproj", "{74BE6422-F660-4C16-856E-8553B463E992}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeBroglie", "..\DeBroglie\DeBroglie\DeBroglie.csproj", "{DDC52161-0D76-40BB-9424-0A9A62F0677C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,12 @@ Global
 		{74BE6422-F660-4C16-856E-8553B463E992}.Release|Any CPU.Build.0 = Release|Any CPU
 		{74BE6422-F660-4C16-856E-8553B463E992}.Tools|Any CPU.ActiveCfg = Debug|Any CPU
 		{74BE6422-F660-4C16-856E-8553B463E992}.Tools|Any CPU.Build.0 = Debug|Any CPU
+		{DDC52161-0D76-40BB-9424-0A9A62F0677C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDC52161-0D76-40BB-9424-0A9A62F0677C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDC52161-0D76-40BB-9424-0A9A62F0677C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDC52161-0D76-40BB-9424-0A9A62F0677C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDC52161-0D76-40BB-9424-0A9A62F0677C}.Tools|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDC52161-0D76-40BB-9424-0A9A62F0677C}.Tools|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

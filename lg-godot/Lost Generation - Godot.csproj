@@ -79,6 +79,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DeBroglie\DeBroglie\DeBroglie.csproj">
+      <Project>{ddc52161-0d76-40bb-9424-0a9a62f0677c}</Project>
+      <Name>DeBroglie</Name>
+    </ProjectReference>
     <ProjectReference Include="..\lg\Lost Generation.csproj">
       <Project>{793b68f1-c99b-4986-b4a1-1c1bbf12f8e5}</Project>
       <Name>Lost Generation</Name>
