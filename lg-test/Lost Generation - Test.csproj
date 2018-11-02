@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net45</TargetFramework>
+    <TargetFramework>net471</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -16,9 +16,11 @@
     <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
     <PackageReference Include="Redux.NET" Version="2.0.0" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DeBroglie\DeBroglie\DeBroglie.csproj" />
     <ProjectReference Include="..\lg\Lost Generation.csproj" />
   </ItemGroup>
 
