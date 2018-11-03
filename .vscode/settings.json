@@ -1,5 +1,5 @@
 {
-    "dotnet-test-explorer.testProjectPath": "lg-godot",
+    "dotnet-test-explorer.testProjectPath": "lg-test",
     "csharp.unitTestDebuggingOptions": {
         "type":"clr"
     }
