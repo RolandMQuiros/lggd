@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lost Generation", "..\lg\Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeBroglie", "..\DeBroglie\DeBroglie\DeBroglie.csproj", "{3E2A211E-E997-4D7D-BA50-B67AA1378FD5}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeBroglie.MagicaVoxel", "..\DeBroglie\DeBroglie.MagicaVoxel\DeBroglie.MagicaVoxel.csproj", "{66081687-14E2-44D1-B067-02DED322CB46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,12 @@ Global
 		{3E2A211E-E997-4D7D-BA50-B67AA1378FD5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3E2A211E-E997-4D7D-BA50-B67AA1378FD5}.Tools|Any CPU.ActiveCfg = Release|Any CPU
 		{3E2A211E-E997-4D7D-BA50-B67AA1378FD5}.Tools|Any CPU.Build.0 = Release|Any CPU
+		{66081687-14E2-44D1-B067-02DED322CB46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66081687-14E2-44D1-B067-02DED322CB46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66081687-14E2-44D1-B067-02DED322CB46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66081687-14E2-44D1-B067-02DED322CB46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66081687-14E2-44D1-B067-02DED322CB46}.Tools|Any CPU.ActiveCfg = Debug|Any CPU
+		{66081687-14E2-44D1-B067-02DED322CB46}.Tools|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -70,6 +70,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DeBroglie\DeBroglie.MagicaVoxel\DeBroglie.MagicaVoxel.csproj">
+      <Project>{66081687-14e2-44d1-b067-02ded322cb46}</Project>
+      <Name>DeBroglie.MagicaVoxel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeBroglie\DeBroglie\DeBroglie.csproj">
+      <Project>{3e2a211e-e997-4d7d-ba50-b67aa1378fd5}</Project>
+      <Name>DeBroglie</Name>
+    </ProjectReference>
     <ProjectReference Include="..\lg\Lost Generation.csproj">
       <Project>{793b68f1-c99b-4986-b4a1-1c1bbf12f8e5}</Project>
       <Name>Lost Generation</Name>
