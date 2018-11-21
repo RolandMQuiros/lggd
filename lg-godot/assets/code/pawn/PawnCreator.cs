@@ -1,15 +1,14 @@
-using Godot;
-using System;
+using System.Collections.Generic;
 using System.Linq;
 
 public class PawnCreator : Godot.Node {
-    [Export]private PackedScene _pawnScene = null;
+    [Godot.Export]private Godot.PackedScene _pawnScene = null;
     private Dictionary<uint, Godot.Node> _activePawns = new Dictionary<uint, Godot.Node>();
 
     public override void _Ready() {
         var storeDelegate = ((StoreDelegate)GetOwner());
-        storeDelegate.Store
-            .Subscribe(OnStateUpdate);
+        // storeDelegate.Store
+        //     .Subscribe(OnStateUpdate);
     }
 
     public void OnStateUpdate(LostGen.Board world) {

@@ -19,7 +19,7 @@ namespace LostGen.Tests {
             var model = new AdjacentModel(sample.ToTiles());
             // Set the output dimensions
             var topology = new Topology(10, 10, periodic: false);
-            // Acturally run the algorithm
+            // Actually run the algorithm
             var propagator = new TilePropagator(model, topology);
             var status = propagator.Run();
             if (status != Resolution.Decided) throw new Exception("Undecided");
@@ -33,6 +33,11 @@ namespace LostGen.Tests {
                 }
                 System.Console.WriteLine();
             }
+        }
+
+        [Test]
+        public void TopologyJSONSerialize() {
+
         }
     }
 }

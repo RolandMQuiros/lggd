@@ -1,21 +1,20 @@
 ﻿using System.Linq;
+using System.Collections.Generic;
 using Redux;
 
 namespace LostGen {
     partial class Reducers {
-        private static Blocks BlocksReducer(Blocks previous, IAction next) {
-            var set = next as Action.SetBlocks;
-            if (set != null) {
-                return SetBlocks(previous, set);
-            }
-            return previous;
-        }
+        private static Dictionary<Point, Block> BlocksReducer(Dictionary<Point, Block> previous, IAction action) {
+            var next = previous;
 
-        private static Blocks SetBlocks(Blocks previous, Action.SetBlocks blocks) {
-            if (blocks.ToSet.Any()) {
-                return new Blocks(previous.Concat(blocks.ToSet));
+            var set = action as Action.SetBlocks;
+            if (set != null) {
+                next = previous
+                    .Concat(set.ToSet)
+                    .ToDictionary(p => p.Key, p => p.Value);
             }
-            return previous;
+
+            return next;
         }
     }
 }

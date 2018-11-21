@@ -5,13 +5,13 @@ using Redux;
 namespace LostGen {
     static partial class Reducers {
         private static Pawn ProcessPawn(Pawn previous, Board world, IPawnAction action) {
-            Pawn next = null;
+            Pawn next = previous;
 
             var push = action as Action.PushAction;
             next = push == null ? next : ProcessPushAction(next, push);
 
             var move = action as Action.MovePawn;
-            next = move == null ? next : ProcessMove(previous, world, move);
+            next = move == null ? next : ProcessMove(next, world, move);
 
             return next ?? previous;
         }
@@ -36,7 +36,7 @@ namespace LostGen {
                 // Collect the collision flags of any intersecting Block
                 var blockCollisions = footprint
                     .Intersect(world.Blocks.Keys)
-                    .Select(p => (CollisionFlags)world.Blocks[p]);
+                    .Select(p => (CollisionFlags)world.Blocks[p].Type);
 
                 // Collect the collision flags of any intersecting Pawn
                 var pawnCollisions = footprint

@@ -1,0 +1,32 @@
+{
+    "model": "adjacent", 
+    "sample": [
+        0, 0, 0, 0, 0, 0,
+        0, 1, 1, 0, 1, 0,
+        0, 1, 2, 0, 1, 0,
+        0, 1, 3, 1, 1, 0,
+        0, 0, 0, 0, 0, 0,
+
+        0, 0, 0, 0, 0, 0,
+        0, 0, 1, 0, 1, 0,
+        0, 0, 1, 0, 1, 0,
+        0, 0, 0, 1, 0, 0,
+        0, 0, 0, 0, 0, 0
+    ],
+    "dimensions": { "X": 6, "Y": 5, "Z": 2 },
+    "tiles": [
+        {
+            "src": "res://assets/meshes/shop.json",
+            "orientation": 1,
+            "obstruction": 12
+        },
+        {
+            "src": "res://assets/meshes/..",
+            "orientation": 2,
+            "obstruction": 12
+        }
+    ],
+    "n": 2,
+    "periodic": true,
+    "symmetries": 1
+}

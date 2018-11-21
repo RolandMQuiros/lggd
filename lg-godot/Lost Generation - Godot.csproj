@@ -63,10 +63,13 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\DebugDispatch.cs" />
-    <Compile Include="Code\Pawn\PawnCharacter.cs" />
-    <Compile Include="Code\Pawn\PawnCreator.cs" />
-    <Compile Include="Code\StoreDelegate.cs" />
+    <Compile Include="assets\code\StoreDelegate.cs" />
+    <Compile Include="assets\code\DebugDispatch.cs" />
+    <Compile Include="assets\code\generator\DeBroglieData.cs" />
+    <Compile Include="assets\code\generator\DeBroglieBuilder.cs" />
+    <Compile Include="assets\code\generator\SampleCell.cs" />
+    <Compile Include="assets\code\pawn\PawnCharacter.cs" />
+    <Compile Include="assets\code\pawn\PawnCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

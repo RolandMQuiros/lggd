@@ -5,6 +5,8 @@ using Redux;
 namespace LostGen {
     static partial class Reducers {
         public static Board BoardReducer(Board previous, IAction action) {
+            var next = previous;
+
             if (action is Action.Step) {
                 return ProcessStep(previous);
             }
@@ -12,10 +14,11 @@ namespace LostGen {
             if (pawnAction != null) {
                 return ProcessPawnAction(previous, pawnAction);
             }
-            return new Board {
-                Pawns = PawnsReducer(previous.Pawns, action),
-                Blocks = BlocksReducer(previous.Blocks, action)
-            };
+
+            return new Board(
+                blocks: BlocksReducer(previous.Blocks, action),
+                pawns: PawnsReducer(previous.Pawns, action)
+            );
         }
 
         private static Board ProcessPawnAction(Board previous, IPawnAction action) {
@@ -24,9 +27,10 @@ namespace LostGen {
             Pawn targetPawn;
             if (previous.Pawns.TryGetValue(action.ID, out targetPawn)) {
                 // Create a new BoardState
-                next = new Board(previous) {
-                    Pawns = new Dictionary<uint, Pawn>(previous.Pawns) // Copy the Pawns dictionary
-                };
+                next = new Board(
+                    blocks: previous.Blocks,
+                    pawns: new Dictionary<uint, Pawn>(previous.Pawns) // Copy the Pawns dictionary
+                );
                 // Run the reducers that only refer to the currently identified Pawn
                 next.Pawns[action.ID] = ProcessPawn(targetPawn, previous, action);
             }
@@ -42,13 +46,14 @@ namespace LostGen {
 
             if (actions.Any()) {
                 // Create new Pawn dictionary with shorter action queues
-                next = new Board(previous) {
-                    Pawns = previous.Pawns.Values.Select(
+                next = new Board(
+                    blocks: previous.Blocks,
+                    pawns: previous.Pawns.Values.Select(
                         p => new Pawn(p) {
                             Actions = p.Actions.Take(p.Actions.Count() - 1)
                         }
                     ).ToDictionary(p => p.InstanceID, p => p)
-                };
+                );
                 
                 // Run the actions
                 foreach (var dequeuedAction in actions) {

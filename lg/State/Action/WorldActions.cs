@@ -11,7 +11,7 @@ namespace LostGen.Action {
     }
 
     public class SetBlocks : IAction {
-        public Dictionary<Point, BlockType> ToSet = new Dictionary<Point, BlockType>();
+        public Dictionary<Point, Block> ToSet = new Dictionary<Point, Block>();
     }
 
     public class Step : IAction { }

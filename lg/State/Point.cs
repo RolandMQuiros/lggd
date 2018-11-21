@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 namespace LostGen
 {
-    public enum Direction {
-        SouthEast = 1,
-        South = 2,
-        SouthWest = 3,
-        East = 4,
-        West = 6,
-        NorthEast = 7,
-        North = 8,
-        NorthWest = 9,        
-        Count = 8
+    [Flags]
+    public enum Directions {
+        SouthEast,
+        South,
+        SouthWest,
+        East,
+        West,
+        NorthEast,
+        North,
+        NorthWest
     }
 
     [Serializable]
@@ -298,33 +298,33 @@ namespace LostGen
             }
         }
 
-        public static Direction CardinalDirectionBetweenPoints(Point p1, Point p2) {
+        public static Directions CardinalDirectionBetweenPoints(Point p1, Point p2) {
             Point difference = p2 - p1;
 
-            Direction direction = Direction.South;
+            Directions direction = Directions.South;
             int scalarY = Math.Abs(difference.Y);
 
             if (difference.Y >= 0) {
                 if (difference.X > scalarY) {
-                    direction = Direction.East;
+                    direction = Directions.East;
                 }
                 else if (difference.X <= scalarY && difference.X >= -scalarY) {
-                    direction = Direction.South;
+                    direction = Directions.South;
                 }
                 else if (difference.X < -scalarY) {
-                    direction = Direction.West;
+                    direction = Directions.West;
                 }
             }
             else
             {
                 if (difference.X > scalarY) {
-                    direction = Direction.East;
+                    direction = Directions.East;
                 }
                 else if (difference.X <= scalarY && difference.X >= -scalarY) {
-                    direction = Direction.North;
+                    direction = Directions.North;
                 }
                 else if (difference.X < -scalarY) {
-                    direction = Direction.West;
+                    direction = Directions.West;
                 }
             }
 
