@@ -21,7 +21,7 @@
             "obstruction": 12
         },
         {
-            "src": "res://assets/meshes/..",
+            "src": 1,
             "orientation": 2,
             "obstruction": 12
         }

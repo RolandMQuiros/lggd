@@ -17,7 +17,7 @@ public class DeBroglieSampleData {
         public int Orientation { get; set; }
         public byte Obstruction { get; set; }
     }
-    public IEnumerable<TileData> Tiles { get; set; }
+    public TileData[] Tiles { get; set; }
     public int N { get; set; }
     public bool Periodic { get; set; }
     public int Symmetries { get; set; }
