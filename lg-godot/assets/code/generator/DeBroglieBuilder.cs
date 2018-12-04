@@ -4,12 +4,18 @@ using DeBroglie.Topo;
 using Godot;
 using System;
 
+/*
+    Notes on cell orientation and obstructions:
+    They're undocumented and unintuitive to use, so don't try to derive anything from them.
+    Instead, when we're defining the sample, we'll use two GridMaps. One will have the mesh
+    with its orientation applied, the other will have 64 explicit obstruction tiles.
+
+    Layer the second on top of the first, then when building the sample, use the latter directly
+    for obstructions.
+*/
+
 public class DeBroglieBuilder : GridMap {
     [Export] public string SampleSrc = "";
-    
-    public override void _Ready()
-    {
-    }
 
     public DeBroglieBuilder Build(string src, int width, int height, int depth) {
         var file = new File();
@@ -54,9 +60,19 @@ public class DeBroglieBuilder : GridMap {
                 if (int.TryParse(tile.Src, out meshIndex)) {
                     // If the tile Src is an int, it's referring to an index in the MeshLibrary
                     SetCellItem(p.X, p.Y, p.Z, meshIndex, tile.Orientation);
-                }/* else {
-                    
-                }*/
+                } else {
+                    // Otherwise, assume Src is a resource path pointing to another sample set
+                    var subBuilder = new DeBroglieBuilder();
+                    AddChild(subBuilder);
+                    // Shrink the new builder and offset so that it fits in the larger GridMap
+                    subBuilder.SetScale(Vector3.One / tile.Size);
+                    subBuilder.Translate(new Vector3(
+                        p.X * CellSize.x,
+                        p.Y * CellSize.y,
+                        p.Z * CellSize.z
+                    ));
+                    subBuilder.Build(tile.Src, tile.Size, tile.Size, tile.Size);
+                }
             }
         );
 

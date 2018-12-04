@@ -14,6 +14,7 @@ public class DeBroglieSampleData {
 
     public class TileData {
         public string Src { get; set; }
+        public int Size { get; set; } = 1;
         public int Orientation { get; set; }
         public byte Obstruction { get; set; }
     }
